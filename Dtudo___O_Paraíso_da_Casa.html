@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dtudo – O Paraíso da Casa</title>
+<meta name="description" content="Utilidades domésticas, mesas, cadeiras, organização e brinquedos. 4 lojas: Cocaia, Itapecerica da Serra, Parelheiros e Praia Grande.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0b46be;--deep:#06267a;--yellow:#ffe500;--bg:#f4f7ff;--fg:#0a1f5c;--muted:#4a5a8a;--card:#fff;--line:#d9e2fa;--ok:#12a150;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060f2e;--fg:#eef2ff;--muted:#a9b6e0;--card:#0d1a45;--line:#1d2f6b}}
+:root[data-theme="dark"]{--bg:#060f2e;--fg:#eef2ff;--muted:#a9b6e0;--card:#0d1a45;--line:#1d2f6b}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Baloo 2","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:14px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 40px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:700 16px "DM Sans",sans-serif;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.y{background:var(--yellow);color:#0130b7;box-shadow:0 6px 0 #c9b300}
+.btn.y:hover{box-shadow:0 9px 0 #c9b300}
+.btn.o{border-color:currentColor;color:#fff;background:transparent}
+.btn.b{background:var(--blue);color:#fff}
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
+header.s{background:var(--blue);box-shadow:0 4px 20px #0004}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.6rem "Baloo 2",sans-serif;color:#fff;text-decoration:none}
+.logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--yellow);font-style:normal;font-size:22px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{color:#fff;text-decoration:none;font-weight:500}
+.nav ul a:hover{color:var(--yellow)}
+@media(max-width:760px){.nav ul{display:none}}
+.hero{background:radial-gradient(1200px 600px at 85% 10%,#2a6bff55,transparent 60%),linear-gradient(160deg,var(--blue),var(--deep));color:#fff;padding:130px 0 90px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.8rem,8vw,5.4rem);font-weight:800}
+.hero h1 em{font-style:normal;background:var(--yellow);color:#0130b7;padding:0 .18em;border-radius:14px;display:inline-block;transform:rotate(-2deg)}
+.hero p{font-size:1.15rem;max-width:46ch;opacity:.92;margin:20px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.blob{position:absolute;border-radius:50%;background:var(--yellow);opacity:.14;animation:fl 9s ease-in-out infinite}
+.blob.a{width:340px;height:340px;right:-90px;top:60px}
+.blob.b{width:160px;height:160px;left:-50px;bottom:40px;animation-delay:-4s}
+@keyframes fl{50%{transform:translateY(-28px) scale(1.06)}}
+.in{opacity:0;transform:translateY(24px);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}
+.in.d1{animation-delay:.15s}.in.d2{animation-delay:.3s}.in.d3{animation-delay:.45s}.in.d4{animation-delay:.6s}
+@keyframes up{to{opacity:1;transform:none}}
+.finder{background:var(--card);color:var(--fg);border-radius:28px;padding:22px;box-shadow:0 30px 60px #0006;position:relative}
+.finder h2{font-size:1.5rem;margin-bottom:12px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{border:2px solid var(--line);background:transparent;color:var(--fg);padding:8px 14px;border-radius:999px;font:700 14px "DM Sans",sans-serif;cursor:pointer;transition:all .2s}
+.tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff;transform:scale(1.05)}
+.panel{animation:sw .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes sw{from{opacity:0;transform:translateX(26px)}}
+.panel h3{font-size:1.7rem}
+.panel .addr{margin:8px 0 14px;color:var(--muted)}
+.chip{display:inline-block;background:#12a15022;color:var(--ok);padding:3px 12px;border-radius:99px;font-weight:700;font-size:13px;margin-bottom:10px}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.row .btn{padding:11px 18px;font-size:15px}
+.mq{background:var(--yellow);color:#0130b7;overflow:hidden;white-space:nowrap;padding:16px 0;font:800 1.5rem "Baloo 2",sans-serif;transform:rotate(-1deg);margin:-14px -10px 0;position:relative;z-index:2}
+.mq div{display:inline-block;animation:mq 28s linear infinite}
+.mq span{margin:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:24px 10px}
+.stat b{display:block;font:800 clamp(2rem,5vw,3rem) "Baloo 2",sans-serif;color:var(--blue)}
+@media(prefers-color-scheme:dark){.stat b{color:var(--yellow)}}
+.stat span{color:var(--muted);font-size:15px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.cat{background:var(--card);border:2px solid var(--line);border-radius:26px;padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.cat:hover{transform:translateY(-8px) rotate(-1deg);border-color:var(--yellow);box-shadow:0 14px 0 var(--yellow)}
+.cat .e{font-size:2.6rem;display:block;margin-bottom:8px}
+.cat h3{font-size:1.4rem;margin-bottom:6px}
+.cat p{margin:0;color:var(--muted);font-size:15px}
+.stores{background:var(--blue);color:#fff}
+.stores .lead{color:#d6e2ff}
+.sc{background:var(--card);color:var(--fg);border-radius:26px;padding:26px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.sc:hover{transform:translateY(-6px)}
+.sc h3{font-size:1.5rem}
+.sc p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.vals{display:grid;gap:14px}
+.val{display:flex;gap:14px;background:var(--card);border:2px solid var(--line);border-radius:20px;padding:18px}
+.val span{font-size:1.8rem}
+.val b{display:block;font-family:"Baloo 2",sans-serif;font-size:1.2rem}
+.val small{color:var(--muted);font-size:15px}
+.rv{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:24px}
+.rv .st{color:#f5a800;letter-spacing:2px}
+.rv p{margin:8px 0 12px}
+.rv small{color:var(--muted)}
+.final{background:linear-gradient(160deg,var(--blue),var(--deep));color:#fff;text-align:center;border-radius:36px;padding:60px 24px}
+.final p{opacity:.9;max-width:50ch;margin:0 auto 26px}
+.final .cta{justify-content:center}
+footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:14px}
+.rv-in{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv-in.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.in,.rv-in{opacity:1;transform:none}}
+
+/* 3D de fundo */
+.hero .wrap{position:relative;z-index:2}
+.scene{position:absolute;inset:0;z-index:1;perspective:900px;pointer-events:none;overflow:hidden}
+.rig{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .25s ease-out}
+.fl{position:absolute;transform-style:preserve-3d;animation:cubefl 6s ease-in-out var(--fd) infinite}
+.cube{position:relative;width:var(--s);height:var(--s);transform-style:preserve-3d;animation:cubespin var(--t) linear infinite}
+.cube i{position:absolute;inset:0;display:grid;place-items:center;border-radius:12px;border:3px solid #ffffff66;background:var(--c);color:var(--cl);font:800 calc(var(--s)*.55) "Baloo 2",sans-serif;font-style:normal;box-shadow:inset 0 0 18px #0003}
+.cube i:nth-child(1){transform:translateZ(calc(var(--s)/2))}
+.cube i:nth-child(2){transform:rotateY(90deg) translateZ(calc(var(--s)/2))}
+.cube i:nth-child(3){transform:rotateY(180deg) translateZ(calc(var(--s)/2))}
+.cube i:nth-child(4){transform:rotateY(-90deg) translateZ(calc(var(--s)/2))}
+.cube i:nth-child(5){transform:rotateX(90deg) translateZ(calc(var(--s)/2))}
+.cube i:nth-child(6){transform:rotateX(-90deg) translateZ(calc(var(--s)/2))}
+@keyframes cubespin{from{transform:rotateX(-22deg) rotateY(0)}to{transform:rotateX(338deg) rotateY(360deg)}}
+@keyframes cubefl{0%,100%{transform:translate3d(0,0,var(--z))}50%{transform:translate3d(0,-24px,var(--z))}}
+.bal{position:absolute;bottom:-90px;width:42px;height:54px;border-radius:50% 50% 48% 48%;background:radial-gradient(circle at 32% 26%,#ffffffaa,#fff0 38%),var(--c);opacity:.8;animation:balup var(--t) linear infinite}
+.bal::after{content:"";position:absolute;left:50%;top:100%;width:1px;height:46px;background:#ffffff80}
+@keyframes balup{to{transform:translate(26px,-820px) rotate(10deg)}}
+@media(max-width:700px){.rig{scale:.65}.bal{width:30px;height:38px}}
+@media(prefers-reduced-motion:reduce){.scene{display:none}}
+
+/* Dia das Crianças */
+.kids{padding:20px 0 40px}
+.kbox{position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center;background:var(--deep);color:#fff;border-radius:36px;padding:48px}
+.kbox>*{position:relative;z-index:1}
+@media(max-width:860px){.kbox{grid-template-columns:1fr;padding:34px 24px}}
+.kbadge{display:inline-block;background:var(--yellow);color:#0130b7;padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px;margin-bottom:14px}
+.kbox h2{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:12px}
+.kbox p{max-width:46ch;opacity:.92;margin:0 0 24px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}
+.tl{background:var(--yellow);color:#0130b7;border-radius:20px;padding:16px 4px;box-shadow:0 6px 0 #c9b300}
+.tl b{display:block;font:800 clamp(1.8rem,5vw,2.6rem)/1 "Baloo 2",sans-serif}
+.tl span{font-size:13px;font-weight:700}
+.cdm{grid-column:1/-1;font:800 1.5rem "Baloo 2",sans-serif;color:var(--yellow)}
+.cf{position:absolute;top:-20px;z-index:0;width:9px;height:15px;background:var(--c);animation:cfall var(--t) linear var(--d) infinite}
+@keyframes cfall{to{transform:translateY(520px) rotate(560deg)}}
+</style>
+</head>
+<body>
+<header id="top"><div class="wrap nav">
+<a class="logo" href="#"><i>🏠</i>Dtudo</a>
+<ul><li><a href="#produtos">Produtos</a></li><li><a href="#criancas">Dia das Crianças</a></li><li><a href="#lojas">Lojas</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#avaliacoes">Avaliações</a></li></ul>
+<a class="btn y" href="#lojas" style="padding:9px 18px;font-size:15px">Como chegar</a>
+</div></header>
+
+<main>
+<section class="hero" style="padding-bottom:110px">
+<div class="blob a"></div><div class="blob b"></div>
+<div class="scene" aria-hidden="true"><div class="rig" id="rig"></div></div>
+<div class="wrap">
+<div>
+<h1 class="in">Aqui é o <em>Paraíso</em> da sua casa!</h1>
+<p class="in d1">Utilidades, organização, mesas e cadeiras, brinquedos e muito mais, com preço bom e atendimento que você sente. Uma loja pet friendly, pertinho de você.</p>
+<div class="cta in d2"><a class="btn y" href="#lojas">Ver lojas e endereços</a><a class="btn o" href="#produtos">O que tem na Dtudo</a></div>
+</div>
+<div class="finder in d3" aria-label="Encontre a loja mais perto">
+<h2>Qual loja é a sua?</h2>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="panel" class="panel" role="tabpanel" aria-live="polite"></div>
+</div>
+</div>
+</section>
+
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section style="padding-top:70px">
+<div class="wrap stats rv-in">
+<div class="stat"><b data-n="4">0</b><span>lojas na região</span></div>
+<div class="stat"><b data-n="31.4" data-d="1" data-s="K">0</b><span>seguidores no Instagram</span></div>
+<div class="stat"><b data-n="4.9" data-d="1" data-s="★">0</b><span>nota no Google</span></div>
+<div class="stat"><b data-n="169">0</b><span>avaliações de clientes</span></div>
+</div>
+</section>
+
+<section class="kids" id="criancas">
+<div class="wrap"><div class="kbox rv-in" id="kbox">
+<div><span class="kbadge">🎈 Dia das Crianças · 12 de outubro</span>
+<h2>Falta pouco para a festa da criançada!</h2>
+<p>Brinquedos, jogos e presentes com preço bom em todas as lojas Dtudo. Escolha o presente e deixe o dia ainda mais divertido.</p>
+<div class="cta"><a class="btn y" href="#lojas">Ver lojas e endereços</a><a class="btn o" href="#produtos">Ver brinquedos</a></div></div>
+<div class="cd" id="cd" role="timer" aria-label="Contagem regressiva para o Dia das Crianças"></div>
+</div></div>
+</section>
+
+<section id="produtos" style="padding-top:20px">
+<div class="wrap">
+<h2 class="rv-in">Tudo o que a sua casa precisa</h2>
+<p class="lead rv-in">Do dia a dia da cozinha à festa das crianças: encontre num só lugar, com promoções toda semana.</p>
+<div class="grid">
+<div class="cat rv-in"><span class="e">🍽️</span><h3>Utilidades domésticas</h3><p>Jarras, copos, potes e itens de cozinha e limpeza.</p></div>
+<div class="cat rv-in"><span class="e">🪑</span><h3>Mesas e cadeiras</h3><p>Conjuntos para varanda, área gourmet e quintal.</p></div>
+<div class="cat rv-in"><span class="e">📦</span><h3>Organização</h3><p>Caixas, cabideiros e prateleiras para cada cantinho.</p></div>
+<div class="cat rv-in"><span class="e">🧸</span><h3>Brinquedos</h3><p>Presentes para o Dia das Crianças o ano todo.</p></div>
+<div class="cat rv-in"><span class="e">🐾</span><h3>Pet friendly</h3><p>Traga seu pet para passear com você pelos corredores.</p></div>
+<div class="cat rv-in"><span class="e">🏷️</span><h3>Ofertas da semana</h3><p>Entre no grupo de ofertas e saiba antes de todo mundo.</p></div>
+</div>
+</div>
+</section>
+
+<section id="lojas" class="stores">
+<div class="wrap">
+<h2 class="rv-in">Nossas lojas</h2>
+<p class="lead rv-in">Escolha a unidade e abra a rota direto no Google Maps ou chame no WhatsApp.</p>
+<div class="grid" id="cards"></div>
+</div>
+</section>
+
+<section id="sobre">
+<div class="wrap about">
+<div class="rv-in">
+<h2>Uma loja que cuida da sua casa como se fosse nossa</h2>
+<p class="lead" style="margin-bottom:18px">A Dtudo nasceu para facilitar a vida de quem quer montar, organizar e renovar o lar sem pagar caro. Hoje são quatro lojas, com equipe atenciosa, corredores organizados e novidades chegando toda semana.</p>
+<a class="btn b" href="#lojas">Visite uma loja</a>
+</div>
+<div class="vals">
+<div class="val rv-in"><span>💰</span><div><b>Preço que cabe no bolso</b><small>Variedade de produtos com promoções frequentes.</small></div></div>
+<div class="val rv-in"><span>🤝</span><div><b>Atendimento de verdade</b><small>Clientes elogiam a equipe educada e prestativa.</small></div></div>
+<div class="val rv-in"><span>🧭</span><div><b>Fácil de achar tudo</b><small>Loja bem organizada, com tudo ao alcance.</small></div></div>
+</div>
+</div>
+</section>
+
+<section id="avaliacoes" style="padding-top:20px">
+<div class="wrap">
+<h2 class="rv-in">Quem compra, recomenda</h2>
+<p class="lead rv-in">Avaliações reais da loja de Parelheiros no Google.</p>
+<div class="grid">
+<div class="rv rv-in"><div class="st">★★★★★</div><p>“Loja bem organizada, fácil acesso para os utensílios, e um ótimo atendimento no caixa. Excelente atendimento, educada e tirou todas as minhas dúvidas.”</p><small>Jessica Suely da Silva</small></div>
+<div class="rv rv-in"><div class="st">★★★★★</div><p>“Foi excelente, grande variedade de produtos e com preços ótimos. O atendimento foi muito bom, atenciosa e simpática, me ajudou pacientemente.”</p><small>Gustavo Reis</small></div>
+<div class="rv rv-in"><div class="st">★★★★★</div><p>“Faltavam peças na minha compra, voltei na loja e fui super bem atendido pelo gerente Edilson e demais funcionários.”</p><small>Rafael Snk</small></div>
+</div>
+</div>
+</section>
+
+<section style="padding-top:20px">
+<div class="wrap"><div class="final rv-in">
+<h2>Vem para a Dtudo!</h2>
+<p>Siga a gente e entre no grupo de ofertas para não perder nenhuma promoção.</p>
+<div class="cta"><a class="btn y" href="https://www.instagram.com/lojadtudoutilidades/" target="_blank" rel="noopener">Instagram</a><a class="btn o" href="https://www.facebook.com/dtudoparaisodacasa" target="_blank" rel="noopener">Facebook</a><a class="btn o" href="https://linktr.ee/dtudoparaisodacasa" target="_blank" rel="noopener">Todos os links</a></div>
+</div></div>
+</section>
+</main>
+
+<footer><div class="wrap">Dtudo – O Paraíso da Casa · Site de demonstração · contato@dtudoparaolar.com.br</div></footer>
+
+<script>
+const S=[
+{k:'Parelheiros',n:'Loja Parelheiros',c:'São Paulo/SP',a:'Estr. Ecoturística de Parelheiros, 6288 – Jardim Casa Grande, São Paulo – SP, 04865-005',t:'(11) 91745-6462',h:'Hoje: fecha às 21h',w:'https://tinyurl.com/dtudoparelheiros',m:'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent('Estr. Ecoturística de Parelheiros, 6288, São Paulo - SP')},
+{k:'Cocaia',n:'Loja Parque Residencial Cocaia',c:'São Paulo/SP',a:'R. Rubens de Oliveira, 200 – Parque Res. Cocaia, São Paulo – SP, 04849-210',w:'https://tinyurl.com/cocaiasp',m:'https://www.google.com.br/maps/dir//Dtudo+para+o+Lar+-+R.+Rubens+de+Oliveira,+200+-+Parque+Res.+Cocaia,+S%C3%A3o+Paulo+-+SP,+04849-210'},
+{k:'Itapecerica',n:'Loja Itapecerica da Serra',c:'Itapecerica da Serra/SP',a:'Av. Quinze de Novembro, 1964 – Embu Mirim, Itapecerica da Serra – SP, 06850-100',w:'https://tinyurl.com/dtudoitapecerica',m:'https://www.google.com/maps/dir//Av.+Quinze+de+Novembro,+1964+-+Embu+Mirim,+Itapecerica+da+Serra+-+SP,+06850-100'},
+{k:'Praia Grande',n:'Loja Praia Grande',c:'Praia Grande/SP',a:'Praia Grande – SP. Toque em “Como chegar” para ver o endereço e a rota no mapa.',w:'https://tinyurl.com/dtudopraiagrande',m:'https://maps.app.goo.gl/fKbtAHnHaFVjsE7F6'}
+];
+const $=s=>document.querySelector(s);
+const btns=s=>`<div class="row"><a class="btn b" href="${s.m}" target="_blank" rel="noopener">📍 Como chegar</a><a class="btn y" href="${s.w}" target="_blank" rel="noopener">💬 WhatsApp</a>${s.t?`<a class="btn o" style="color:var(--blue);border-color:var(--blue)" href="tel:+55${s.t.replace(/\D/g,'')}">📞 Ligar</a>`:''}</div>`;
+function show(i){
+ document.querySelectorAll('.tab').forEach((b,j)=>b.setAttribute('aria-selected',i===j));
+ const s=S[i];
+ $('#panel').outerHTML=`<div id="panel" class="panel" role="tabpanel" aria-live="polite">${s.h?`<span class="chip">${s.h}</span>`:''}<h3>${s.n}</h3><p class="addr">${s.a}${s.t?'<br>'+s.t:''}</p>${btns(s)}</div>`;
+}
+$('#tabs').innerHTML=S.map((s,i)=>`<button class="tab" role="tab" aria-selected="false" data-i="${i}">${s.k}</button>`).join('');
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(b)show(+b.dataset.i)});
+show(0);
+$('#cards').innerHTML=S.map(s=>`<article class="sc rv-in"><h3>${s.n}</h3><p>${s.a}${s.t?'<br>'+s.t:''}</p>${btns(s)}</article>`).join('');
+const words=['Utilidades','Mesas e cadeiras','Organização','Brinquedos','Pet friendly','Promoções toda semana'];
+const line=words.map(w=>`<span>${w} ★</span>`).join('');
+$('#mq').innerHTML=line+line+line+line;
+const hd=$('header');addEventListener('scroll',()=>hd.classList.toggle('s',scrollY>40),{passive:true});
+const count=el=>{const n=+el.dataset.n,d=+el.dataset.d||0,s=el.dataset.s||'',t0=performance.now();
+ (function f(t){const p=Math.min((t-t0)/1400,1),v=n*(1-Math.pow(1-p,3));el.textContent=v.toFixed(d).replace('.',',')+s;if(p<1)requestAnimationFrame(f)})(t0)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv-in').forEach(el=>io.observe(el));
+
+const CU=[['D','#ffe500','#06267a',84,3,66,18,80],['T','#ff4d6d','#fff',64,44,6,22,-40],['U','#38bdf8','#06267a',72,88,5,20,120],['D','#22c55e','#fff',56,50,80,26,40],['O','#ff9f1c','#06267a',90,91,76,24,-60],['!','#a855f7','#fff',52,22,84,16,100]];
+$('#rig').innerHTML=CU.map(([L,c,k,z,l,t,d,zz],i)=>`<div class="fl" style="left:${l}%;top:${t}%;--z:${zz}px;--fd:${-i*1.7}s"><div class="cube" style="--s:${z}px;--c:${c};--cl:${k};--t:${d}s">${[L,'★',L,'★',L,'★'].map(x=>`<i>${x}</i>`).join('')}</div></div>`).join('');
+const BC=['#ff4d6d','#38bdf8','#22c55e','#a855f7','#ff9f1c','#ffe500'];
+$('.scene').insertAdjacentHTML('beforeend',BC.map((c,i)=>`<span class="bal" style="left:${6+i*17}%;--c:${c};--t:${16+i*3}s;animation-delay:${-i*4}s"></span>`).join(''));
+const hero=$('.hero'),rig=$('#rig');
+hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect();rig.style.transform=`rotateY(${((e.clientX-r.left)/r.width-.5)*14}deg) rotateX(${-((e.clientY-r.top)/r.height-.5)*14}deg)`});
+hero.addEventListener('mouseleave',()=>rig.style.transform='');
+const T=new Date(new Date().getFullYear(),9,12);
+function tick(){const d=T-Date.now(),el=$('#cd');
+ if(d<=0){el.innerHTML='<div class="cdm">Hoje é dia de presentear! 🎁</div>';return}
+ el.innerHTML=[['dias',Math.floor(d/864e5)],['horas',Math.floor(d%864e5/36e5)],['min',Math.floor(d%36e5/6e4)],['seg',Math.floor(d%6e4/1e3)]].map(([l,v])=>`<div class="tl"><b>${String(v).padStart(2,'0')}</b><span>${l}</span></div>`).join('')}
+tick();setInterval(tick,1000);
+$('#kbox').insertAdjacentHTML('beforeend',Array.from({length:22},(_,i)=>`<i class="cf" style="left:${(i*4.7+3)%100}%;--c:${BC[i%6]};--t:${5+i%5}s;--d:${-(i*.7)}s"></i>`).join(''));
+</script>
+</body>
+</html>
