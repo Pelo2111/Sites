@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kin Hair & Beauty Style | Salão em Cidade Dutra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0c0b0a;--bg2:#15130f;--gold:#c8a45e;--gold2:#e6cf9b;--txt:#ece6da;--mut:#a39a89;--line:#3a3220;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--txt);font:300 17px/1.7 'Jost',system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(12,11,10,.92);border-bottom:1px solid var(--line)}
+header nav{display:flex;gap:26px;font-size:15px;color:var(--mut)}
+header nav a:hover{color:var(--gold2)}
+.mini{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);letter-spacing:.04em}
+.logo{display:inline-flex;flex-direction:column;align-items:center;color:var(--gold)}
+.logo .row{display:flex;align-items:center;gap:.18em;font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1}
+.logo .kj{font-size:.5em;border:1px solid var(--gold);padding:.12em .18em;font-family:serif}
+.logo small{font:400 .17em/1 'Cormorant Garamond',serif;letter-spacing:.35em;margin-top:.6em;align-self:flex-end}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:60px 6vw;background:radial-gradient(ellipse at 50% 35%,#1d1810 0,var(--bg) 65%)}
+.hero .logo{font-size:clamp(64px,15vw,150px)}
+.hero p.lead{max-width:34em;margin:34px auto 0;color:var(--mut);font-size:19px}
+.hero h1{margin:0;font-size:0;line-height:0}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn{padding:13px 30px;border:1px solid var(--gold);font-size:15px;transition:background .2s,color .2s}
+.btn.fill{background:var(--gold);color:#17120a;font-weight:500}
+.btn:hover{background:var(--gold2);color:#17120a}
+.stats{display:flex;justify-content:center;gap:clamp(24px,6vw,70px);flex-wrap:wrap;padding:30px 5vw;border-block:1px solid var(--line);background:var(--bg2);text-align:center}
+.stats b{display:block;font:500 34px/1.1 'Cormorant Garamond',serif;color:var(--gold2)}
+.stats span{font-size:14px;color:var(--mut)}
+section{padding:90px 6vw;max-width:1000px;margin:auto}
+h2{font:500 clamp(34px,5vw,48px)/1.1 'Cormorant Garamond',serif;color:var(--gold);margin:0 0 10px}
+.sub{color:var(--mut);margin:0 0 40px;max-width:36em}
+.svc{list-style:none;margin:0;padding:0}
+.svc li{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:8px 30px;padding:22px 0;border-top:1px solid var(--line)}
+.svc li:last-child{border-bottom:1px solid var(--line)}
+.svc h3{margin:0;font:500 26px/1.2 'Cormorant Garamond',serif;color:var(--gold2)}
+.svc p{margin:0;color:var(--mut)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+table{width:100%;border-collapse:collapse}
+td{padding:10px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;color:var(--gold2)}
+tr.off td:last-child{color:var(--mut)}
+.note{font-size:14px;color:var(--mut);margin-top:14px}
+.addr p{margin:0 0 14px}
+footer{padding:36px 6vw;text-align:center;border-top:1px solid var(--line);color:var(--mut);font-size:14px}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--gold);color:#17120a;padding:13px 22px;font-weight:500;font-size:15px;box-shadow:0 4px 18px rgba(0,0,0,.5)}
+@media(max-width:720px){header nav{display:none}.svc li,.split{grid-template-columns:1fr}.split{gap:40px}section{padding:64px 6vw}}
+.hero{position:relative;overflow:hidden}
+.hero>div{position:relative;z-index:1}
+.sparks span{position:absolute;bottom:-10px;width:5px;height:5px;background:var(--gold2);transform:rotate(45deg);opacity:0}
+.blade{transform-box:view-box;transform-origin:12px 11px}
+.logo .row>span:not(.kj){display:inline-block}
+.shine{background:linear-gradient(100deg,var(--gold) 35%,#fff3d0 50%,var(--gold) 65%) 0/250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.btn{position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-2px)}
+.svc li{transition:padding-left .3s,background .3s}
+.svc li:hover{padding-left:16px;background:linear-gradient(90deg,#1c170d,transparent)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.nojs .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:no-preference){
+.logo .row>span{animation:drop 1s cubic-bezier(.2,.8,.2,1) both}
+.logo .row>span:nth-child(2){animation-delay:.15s}.logo .row>span:nth-child(3){animation-delay:.3s}
+.logo small{animation:fade 1.2s .9s both}
+.hero .logo{animation:glint 5s 2.2s infinite}
+.hero p.lead,.btns{animation:fade 1s 1.2s both}
+.sparks span{animation:float linear infinite}
+.blade.a{animation:snipA 2.4s 1.4s infinite ease-in-out}
+.blade.b{animation:snipB 2.4s 1.4s infinite ease-in-out}
+.kj{animation:pulseb 3s infinite}
+.wa{animation:ping 2.6s infinite}
+.btn.fill::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:sweep 3.5s 2s infinite}
+@keyframes drop{from{opacity:0;transform:translateY(-34px) scale(.9)}}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}}
+@keyframes glint{0%,60%,100%{filter:none}80%{filter:brightness(1.5) drop-shadow(0 0 10px rgba(230,207,155,.6))}}
+@keyframes float{0%{transform:translateY(0) rotate(45deg) scale(.4);opacity:0}15%{opacity:.8}100%{transform:translateY(-95vh) translateX(var(--dx)) rotate(225deg) scale(1);opacity:0}}
+@keyframes snipA{0%,55%,100%{transform:rotate(0)}70%{transform:rotate(-14deg)}85%{transform:rotate(0)}}
+@keyframes snipB{0%,55%,100%{transform:rotate(0)}70%{transform:rotate(14deg)}85%{transform:rotate(0)}}
+@keyframes pulseb{0%,100%{box-shadow:0 0 0 rgba(200,164,94,0)}50%{box-shadow:0 0 18px rgba(200,164,94,.55)}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(200,164,94,.6)}70%{box-shadow:0 0 0 16px rgba(200,164,94,0)}100%{box-shadow:0 0 0 0 rgba(200,164,94,0)}}
+@keyframes sweep{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <a href="#topo" class="mini" aria-label="Kin Hair">Kin Hair</a>
+  <nav><a href="#servicos">Serviços</a><a href="#horarios">Horários</a><a href="#contato">Contato</a></nav>
+</header>
+
+<main id="topo">
+<div class="hero">
+  <div class="sparks" aria-hidden="true"></div>
+  <div>
+    <h1>Kin Hair & Beauty Style</h1>
+    <div class="logo" role="img" aria-label="Kin Hair & Beauty Style">
+      <div class="row"><span>KIN</span><span class="kj">金</span><span>HAIR</span>
+        <svg width=".55em" height=".55em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><g class="blade a"><circle cx="6" cy="18" r="3"/><path d="M8.5 16.5 20 3"/></g><g class="blade b"><circle cx="14" cy="20" r="3"/><path d="M16 17 9 3"/></g></svg>
+      </div>
+      <small>&amp; BEAUTY STYLE</small>
+    </div>
+    <p class="lead">Salão de beleza em Cidade Dutra. Cabelo, sobrancelha, cílios, maquiagem e muito mais, feminino e masculino.</p>
+    <div class="btns">
+      <a class="btn fill" href="https://wa.me/5511987865989?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Kin%20Hair." >Agendar pelo WhatsApp</a>
+      <a class="btn" href="#servicos">Ver serviços</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div><b>5,0</b><span>avaliação no Google</span></div>
+  <div><b>desde 2014</b><span>em Cidade Dutra</span></div>
+  <div><b>1.755</b><span>publicações no Instagram</span></div>
+</div>
+
+<section id="servicos">
+  <h2>Serviços</h2>
+  <p class="sub">Atendimento feminino e masculino. Fale com a gente para saber valores e disponibilidade.</p>
+  <ul class="svc">
+    <li><h3>Cabelo</h3><p>Cortes e cuidados para mulheres e homens.</p></li>
+    <li><h3>Designer de sobrancelha</h3><p>Sobrancelhas desenhadas de acordo com o formato do seu rosto.</p></li>
+    <li><h3>Micropigmentação</h3><p>Preenchimento e definição com resultado natural e duradouro.</p></li>
+    <li><h3>Extensão de cílios</h3><p>Olhar marcante, com aplicação cuidadosa.</p></li>
+    <li><h3>Maquiagem</h3><p>Para festas, eventos e ocasiões especiais, com a maquiadora parceira <a href="https://www.instagram.com/m4rcinh4_k4n4shiro" style="color:var(--gold2)">@m4rcinh4_k4n4shiro</a>.</p></li>
+    <li><h3>Piercing</h3><p>Aplicação de piercing no salão.</p></li>
+    <li><h3>Manicure e pedicure</h3><p>Mãos e pés bem cuidados.</p></li>
+  </ul>
+</section>
+
+<section id="horarios">
+  <div class="split">
+    <div>
+      <h2>Horários</h2>
+      <table>
+        <tr><td>Segunda a sábado</td><td>9h às 19h</td></tr>
+        <tr class="off"><td>Domingo</td><td>Fechado</td></tr>
+      </table>
+      <p class="note">Confirme o horário antes de ir, pois ele pode mudar em feriados.</p>
+    </div>
+    <div class="addr" id="contato">
+      <h2>Contato</h2>
+      <p>Rua Acuti, 313<br>Cidade Dutra, São Paulo - SP<br>CEP 04810-160</p>
+      <p><a href="tel:+5511987865989" style="color:var(--gold2)">(11) 98786-5989</a></p>
+      <div class="btns" style="justify-content:flex-start;margin-top:20px">
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Sal%C3%A3o+Kin+Hair+%28Marcinha%29%2C+R.+Acuti%2C+313+-+Cidade+Dutra%2C+S%C3%A3o+Paulo+-+SP%2C+04810-160">Como chegar</a>
+        <a class="btn" href="https://www.instagram.com/salaokinhair">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Kin Hair & Beauty Style · Cidade Dutra, São Paulo · Site de demonstração</footer>
+<a class="wa" href="https://wa.me/5511987865989">WhatsApp</a>
+<style>.hero>.sparks{position:absolute;inset:0;z-index:0}</style>
+<script>
+(function(){
+var d=document.documentElement,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var sp=document.querySelector('.sparks');
+if(sp&&!rm){for(var i=0;i<22;i++){var s=document.createElement('span');
+s.style.left=(Math.random()*100)+'%';s.style.setProperty('--dx',(Math.random()*80-40)+'px');
+s.style.animationDuration=(7+Math.random()*8)+'s';s.style.animationDelay=(-Math.random()*12)+'s';
+var z=3+Math.random()*5;s.style.width=s.style.height=z+'px';sp.appendChild(s);}}
+var els=document.querySelectorAll('h2,.sub,.svc li,table,.note,.addr p,.addr .btns,.stats>div');
+els.forEach(function(e,n){e.classList.add('rv');e.style.transitionDelay=((n%6)*80)+'ms';});
+function count(el){var t=el.textContent.trim();var m=t.match(/^[\d.,]+$/);if(!m||rm)return;
+var dec=t.indexOf(',')>-1,target=parseFloat(t.replace(/\./g,'').replace(',','.')),st=null;
+function f(ts){if(!st)st=ts;var p=Math.min((ts-st)/1400,1),v=target*(1-Math.pow(1-p,3));
+el.textContent=dec?v.toFixed(1).replace('.',','):Math.round(v).toLocaleString('pt-BR');
+if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){
+if(x.isIntersecting){x.target.classList.add('in');var b=x.target.querySelector&&x.target.querySelector('b');if(b)count(b);io.unobserve(x.target);}});},{threshold:.15});
+els.forEach(function(e){io.observe(e);});}else{els.forEach(function(e){e.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
